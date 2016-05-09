@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jokingzhang.github.io/"/>
-  <updated>2016-05-08T17:53:42.000Z</updated>
+  <updated>2016-05-09T02:00:57.000Z</updated>
   <id>http://jokingzhang.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://jokingzhang.github.io/2016/05/09/%E4%B8%BAAngular%E7%8C%AE%E4%B8%8A%E7%BE%8E%E5%A5%BD%E7%A5%9D%E7%A6%8F-1/"/>
     <id>http://jokingzhang.github.io/2016/05/09/为Angular献上美好祝福-1/</id>
     <published>2016-05-08T17:35:22.000Z</published>
-    <updated>2016-05-08T17:53:42.000Z</updated>
+    <updated>2016-05-09T02:00:57.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;以更好的方式来学习Angular-js&quot;&gt;&lt;a href=&quot;#以更好的方式来学习Angular-js&quot; class=&quot;headerlink&quot; title=&quot;以更好的方式来学习Angular.js&quot;&gt;&lt;/a&gt;以更好的方式来学习Angular.js&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;翻译自 &lt;a href=&quot;https://thinkster.io/a-better-way-to-learn-angularjs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;a-better-way-to-learn-angularjs&lt;/a&gt;&lt;/p&gt;
@@ -29,7 +29,7 @@
 &lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;恭喜你正在经历一场冒险！&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本篇AngularJS的教程意图是向你展示所有最好的Angular资源。我们的目的是使得目前的这些课程更加丰富，通过各种各样的观点，以便于给你更加全面的视角。&lt;/p&gt;
 &lt;p&gt;AngularJS的学习曲线就像一根曲棍球球棍，从应用程序的基本功能入手是很容易的。然而，构建更加复杂的应用则需要了解Angular内部的工作原理。如果不这样做，会导致开发变得笨拙，麻烦。&lt;br&gt;&lt;img src=&quot;http://o6unimsmt.bkt.clouddn.com/07501226.jpg.238.jpg&quot; alt=&quot;曲棍球杆&quot;&gt;&lt;/p&gt;
-&lt;p&gt;对于 AngularJS，那种“准备，瞄准，射击”的学习方式，比如看一些粘来粘去的教程，粗略的浏览文档。这种方式会使得学习者混乱，而且沮丧。这个课程的目的是通过高质量的内容来让读者了解Angular的方方面面。当你最终掌握了Angular 你将可以流畅，有效的构建应用程序。&lt;/p&gt;
+&lt;p&gt;对于 AngularJS，那种“准备，瞄准，射击”的学习方式，比如看一些粘来粘去的教程，粗略的浏览文档。这种方式会使得学习者混乱，而且沮丧。这个课程的目的是通过高质量的内容来让读者了解Angular的方方面面。当你最终掌握了Angular 你将可以流畅，有效的构建大型应用程序。&lt;/p&gt;
 &lt;p&gt;预备知识&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;中等程度的&lt;code&gt;HTML&lt;/code&gt; &lt;code&gt;CSS&lt;/code&gt; &lt;code&gt;JavaScript&lt;/code&gt;&lt;/li&gt;
@@ -162,7 +162,7 @@
 &lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;email &amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[GitHub](http://github.com)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;自动生成连接  &amp;lt;http://www.github.com/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;Control + Shift + L&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;如果是 MWeb 的文档库中的文档，拖放或&lt;code&gt;CMD + Option + I&lt;/code&gt; 导入非图片时，会生成连接。&lt;br&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#x3a;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#101;&amp;#64;&amp;#x65;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#109;&quot;&gt;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#101;&amp;#64;&amp;#x65;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
+&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#x3a;&amp;#101;&amp;#x78;&amp;#97;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#x40;&amp;#x65;&amp;#x78;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#x65;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#101;&amp;#x78;&amp;#97;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#x40;&amp;#x65;&amp;#x78;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#x65;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
 &lt;h2 id=&quot;区块引用&quot;&gt;&lt;a href=&quot;#区块引用&quot; class=&quot;headerlink&quot; title=&quot;区块引用&quot;&gt;&lt;/a&gt;区块引用&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;某某说:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; 第一行引用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; 第二行费用文字&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;CMD + Shift + B&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;效果如下：&lt;/p&gt;
