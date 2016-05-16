@@ -369,38 +369,16 @@
 
       
         
-          
-            <h3 id="我希望告诉你关于Angular-js"><a href="#我希望告诉你关于Angular-js" class="headerlink" title="我希望告诉你关于Angular.js"></a>我希望告诉你关于Angular.js</h3><blockquote>
-<p>翻译自<a href="http://ruoyusun.com/2013/05/25/things-i-wish-i-were-told-about-angular-js.html" target="_blank" rel="external">Things I Wish I Were Told About Angular.js</a></p>
+          <h3 id="我希望告诉你关于Angular-js"><a href="#我希望告诉你关于Angular-js" class="headerlink" title="我希望告诉你关于Angular.js"></a>我希望告诉你关于Angular.js</h3><blockquote>
+<p>翻译自<a href="http://ruoyusun.com/2013/05/25/things-i-wish-i-were-told-about-angular-js.html">Things I Wish I Were Told About Angular.js</a></p>
 </blockquote>
 <p>最近，我在一个项目中使用了Angular.js。在我写这篇文章的时候，他已经算得上是一个中等规模的应用（~10 modules, ~20 controllers, ~5 services and ~10 directives）以及相当完整的测试覆盖率。回首往事，我发现自己学到了Angular.js的很多知识。这并不是一个顺利的过程：我经历了许多的重构和重写。许多事情我希望当我使用Angular.js工作之前就可以知道。</p>
 <p><strong> 小心！这篇博客是基于Angular.js稳定分支（1.0.x的）。如果你选择一些其他的Angular.js的版本，一些内容可能并不适用</strong></p>
-<h3 id="学习曲线"><a href="#学习曲线" class="headerlink" title="学习曲线"></a>学习曲线</h3><p>Angular.js和Backbone.js的学习曲线相当不同。Backbone.js前期的学习曲线十分的陡峭（基本上是直的，比如说筷子…）：写一个最简单的APP，你需要知道关于这个框架的许多事情。在你搞定之后，还会有相当多的模块构建和最佳实践。</p>
-<p>然而，Angular.js非常不同，开始上手的时候难度非常低：通过首页的例子，你应该可以很好地开始。你不需要了解Angular.js的所有核心概念比如：<strong>模块</strong>（module），<strong>服务</strong>（Service），<strong>依赖注入</strong>（dependency injection），<strong>作用域</strong>（scope），<strong>控制器</strong>（Controller），以及一些<strong>指令</strong>（directives），你就可以开始。对于快速开始来说，文档已经足够优秀。</p>
-<p>问题是，当你开始深入<code>Angular.js</code>并开始写一些“更重”的应用时，学习曲线会突然变得陡峭，文档也会给人一种不完整，累赘的感觉。这将需要花费相当一段时间来度过这个阶段，并从这段学习中受益。这是我希望有人告诉我的第一件事情，这样当我遇到问题的时候，我就不会感到沮丧。</p>
-<h3 id="当你开始之前，先理解模块"><a href="#当你开始之前，先理解模块" class="headerlink" title="当你开始之前，先理解模块"></a>当你开始之前，先理解模块</h3><p>Angular.js 不关心你是否使用它的模块系统。所以，当我开始的时候，我使用了一个巨大的，没有分离<code>Controller</code>的<code>CoffeeScript</code>文件。这使得他很快失控：一个你几乎不能浏览的文件，以及当你访问每个页面的时候，即使你只是使用了其中一个<code>Controller</code>，都需要加载那个巨大的JS文件。</p>
-<p>所以，我停下来开始重构我的项目。首先，我基于不同的页面来把<code>controller</code> 拆分成多个模块，以及一些通用的过滤器和服务。<br>接下来，我确保了所有模块的依赖是正确的，组件成功注入。当然，同时你也需要依赖注入：一个概念，是在Java和C＃的世界颇为流行，但在动态语言却没有。幸运的是（或许你会感到不幸），我做过很多JAVA和C#的开发，这使我并没有花很长时间来理解Angular.js 中的依赖注入，尽管，第一次使用依赖注入的时候还是感觉不自然。当你习惯了使用依赖注入，你会爱上这个概念，他会减少你代码中的耦合，并且更加容易维护。</p>
-<p>所以，如果你不想去重构，当你开始之前，请计划学习modules。</p>
-<h3 id="当你的控制器变得更大时，学习作用域"><a href="#当你的控制器变得更大时，学习作用域" class="headerlink" title="当你的控制器变得更大时，学习作用域"></a>当你的控制器变得更大时，学习作用域</h3><p>我知道，当你开始使用$scope的时候，你可能并不是很理解他。好吧，你不需要。你可以把他当做魔法。然而，下面是一些你可能会遇到的常见的问题。</p>
-<h4 id="为什么视图没有更新？"><a href="#为什么视图没有更新？" class="headerlink" title="为什么视图没有更新？"></a>为什么视图没有更新？</h4><h5 id="example1-js"><a href="#example1-js" class="headerlink" title="example1.js"></a>example1.js</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SomeCtrl</span>(<span class="params">$scope</span>) </span>&#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    $scope.message = <span class="string">"I am here!"</span>;</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="ng-model-quot-touched-quot-为什么没有工作？"><a href="#ng-model-quot-touched-quot-为什么没有工作？" class="headerlink" title="ng-model=&quot;touched&quot;为什么没有工作？"></a><code>ng-model=&quot;touched&quot;</code>为什么没有工作？</h4><h5 id="example2-js"><a href="#example2-js" class="headerlink" title="example2.js"></a>example2.js</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SomeCtrl</span>(<span class="params">$scope</span>) </span>&#123;</span><br><span class="line">  $scope.items = [&#123; value: <span class="number">2</span> &#125;];</span><br><span class="line">  $scope.touched = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="example2-html"><a href="#example2-html" class="headerlink" title="example2.html"></a>example2.html</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">ng-repeat</span>=<span class="string">"item in items"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"item.value"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">ng-model</span>=<span class="string">"touched"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>你需要使用<code>$scope</code>来完成大多数事情。但是重要的是，当你的应用变得越来越大的时候，是时候把它拆成子控制器，继承密切相关的          <code>$scope</code>。你需要理解<code>$scope</code>是如何工作的：</p>
-<ol>
-<li>神奇的数据绑定和 <code>$scope.$watch()</code>,<code>$scope.$apply()</code>之间有着怎样的关联？</li>
-<li>$scope是怎样被controller和他的崽子们共用的？</li>
-<li>什么时候Angular.js会隐式的创建新的$scope？</li>
-<li><code>$scope.$on</code>,<code>$scope.$emit</code>,<code>$scope.$broadcast</code>在作用域中是怎样通信的。</li>
-</ol>
-<p>仅供参考，<br>第二个问题的答案是：你需要<code>$scope.$apply()</code>,<br>第三个问题的答案是：当你使用<code>ng-repeat</code>时，会隐式的创建作用域。</p>
-<h3 id="当你在Controller中操纵DOM时，使用指令（Directives）"><a href="#当你在Controller中操纵DOM时，使用指令（Directives）" class="headerlink" title="当你在Controller中操纵DOM时，使用指令（Directives）"></a>当你在Controller中操纵DOM时，使用指令（Directives）</h3><p><code>Angular.js</code>提倡分离<code>controller</code>和视图（<code>DOM</code>），但是有些原因会使你在<code>controller</code>中直接去操纵DOM。典型的例子就是<code>jquery</code>插件。尽管，<code>jquery</code>插件看起来有点过时，但是这个生态系统不会马上抛弃他。但是，还是不建议在Controller中直接使用<code>jquery</code>插件：会使得你的Controller难以去测试，并且很难重用任何逻辑。</p>
-<p>最好的解决方式，就是自定义指令。我知道你用过指令，但是，你没想过试着去完成一个。事实上，directives是Angular.js最强大的地方之一。想一下那些可复用的组件：不仅仅是<code>jquery</code>插件，以及任何你的子控制器，都可以被使用在多数地方。有点像阴影DOM。最好的地方就是，你的控制器并不需要知道指令的存在：通信是通过作用域的共享以及<code>$scope</code>的事件来实现的。</p>
-<p>然而，<code>directives</code>的文档，是Angular文档最糟糕的部分。满篇的术语，极少的例子，以及大量没有背景的抽象解释。所以，不要惊慌，如果你不能了解它。我的做法是开始写指令，及时完全不了解细则的情况下。当我到了一个懵逼的阶段，我开始回去翻文档，问Google！在我封装了一个<code>jquery</code>插件到我的指令集，我get到了大部分的细节。当没有好的文档的时候，边学边做是很棒的方式。</p>
-<p><strong>一句话总结： put control logic in directive controller, and DOM logic in link function; scope sharing is the glue.</strong></p>
-<h3 id="Angular-js-的路由可能和你的预期并不一样"><a href="#Angular-js-的路由可能和你的预期并不一样" class="headerlink" title="Angular.js 的路由可能和你的预期并不一样"></a>Angular.js 的路由可能和你的预期并不一样</h3><p>这是我需要花时间搞清楚的一个陷阱。Angular.js的路由有一个非常特殊的用法。他不像Backbone.js的路由器，会监视<code>location.hash</code> ，当路由匹配时，调用一个函数。Angular.js工作像是服务端的路由，使用<code>ng-view</code>来工作。当路由被访问时，模板被加载，并注入到<code>ng-view</code>，控制器也会被实例化。所以，如果你不喜欢这种行为，你必须推出自己的服务（包装一些现有的库到Angularjs服务中）。</p>
-<p>这不是一个通用的诀窍，当然，他很特殊。不过，我在这拉昂肥了大量的时间，所以我只是把它放在这里，它可能为你节省几个小时。</p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/16/为Angular献上美好祝福-番外篇1-3-我希望告诉你一些关于Angular的事情/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jokingzhang.github.io/"/>
-  <updated>2016-05-16T16:47:04.000Z</updated>
+  <updated>2016-05-16T17:24:45.000Z</updated>
   <id>http://jokingzhang.github.io/</id>
   
   <author>
@@ -20,13 +20,14 @@
     <link href="http://jokingzhang.github.io/2016/05/16/%E4%B8%BAAngular%E7%8C%AE%E4%B8%8A%E7%BE%8E%E5%A5%BD%E7%A5%9D%E7%A6%8F-%E7%95%AA%E5%A4%96%E7%AF%871-3-%E6%88%91%E5%B8%8C%E6%9C%9B%E5%91%8A%E8%AF%89%E4%BD%A0%E4%B8%80%E4%BA%9B%E5%85%B3%E4%BA%8EAngular%E7%9A%84%E4%BA%8B%E6%83%85/"/>
     <id>http://jokingzhang.github.io/2016/05/16/为Angular献上美好祝福-番外篇1-3-我希望告诉你一些关于Angular的事情/</id>
     <published>2016-05-16T14:28:58.000Z</published>
-    <updated>2016-05-16T16:47:04.000Z</updated>
+    <updated>2016-05-16T17:24:45.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;我希望告诉你关于Angular-js&quot;&gt;&lt;a href=&quot;#我希望告诉你关于Angular-js&quot; class=&quot;headerlink&quot; title=&quot;我希望告诉你关于Angular.js&quot;&gt;&lt;/a&gt;我希望告诉你关于Angular.js&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;翻译自&lt;a href=&quot;http://ruoyusun.com/2013/05/25/things-i-wish-i-were-told-about-angular-js.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Things I Wish I Were Told About Angular.js&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;最近，我在一个项目中使用了Angular.js。在我写这篇文章的时候，他已经算得上是一个中等规模的应用（~10 modules, ~20 controllers, ~5 services and ~10 directives）以及相当完整的测试覆盖率。回首往事，我发现自己学到了Angular.js的很多知识。这并不是一个顺利的过程：我经历了许多的重构和重写。许多事情我希望当我使用Angular.js工作之前就可以知道。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt; 小心！这篇博客是基于Angular.js稳定分支（1.0.x的）。如果你选择一些其他的Angular.js的版本，一些内容可能并不适用&lt;/strong&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h3 id=&quot;学习曲线&quot;&gt;&lt;a href=&quot;#学习曲线&quot; class=&quot;headerlink&quot; title=&quot;学习曲线&quot;&gt;&lt;/a&gt;学习曲线&lt;/h3&gt;&lt;p&gt;Angular.js和Backbone.js的学习曲线相当不同。Backbone.js前期的学习曲线十分的陡峭（基本上是直的，比如说筷子…）：写一个最简单的APP，你需要知道关于这个框架的许多事情。在你搞定之后，还会有相当多的模块构建和最佳实践。&lt;/p&gt;
 &lt;p&gt;然而，Angular.js非常不同，开始上手的时候难度非常低：通过首页的例子，你应该可以很好地开始。你不需要了解Angular.js的所有核心概念比如：&lt;strong&gt;模块&lt;/strong&gt;（module），&lt;strong&gt;服务&lt;/strong&gt;（Service），&lt;strong&gt;依赖注入&lt;/strong&gt;（dependency injection），&lt;strong&gt;作用域&lt;/strong&gt;（scope），&lt;strong&gt;控制器&lt;/strong&gt;（Controller），以及一些&lt;strong&gt;指令&lt;/strong&gt;（directives），你就可以开始。对于快速开始来说，文档已经足够优秀。&lt;/p&gt;
 &lt;p&gt;问题是，当你开始深入&lt;code&gt;Angular.js&lt;/code&gt;并开始写一些“更重”的应用时，学习曲线会突然变得陡峭，文档也会给人一种不完整，累赘的感觉。这将需要花费相当一段时间来度过这个阶段，并从这段学习中受益。这是我希望有人告诉我的第一件事情，这样当我遇到问题的时候，我就不会感到沮丧。&lt;/p&gt;
@@ -55,7 +56,11 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;我希望告诉你关于Angular-js&quot;&gt;&lt;a href=&quot;#我希望告诉你关于Angular-js&quot; class=&quot;headerlink&quot; title=&quot;我希望告诉你关于Angular.js&quot;&gt;&lt;/a&gt;我希望告诉你关于Angular.js&lt;/h3&gt;&lt;blockquo
+      &lt;h3 id=&quot;我希望告诉你关于Angular-js&quot;&gt;&lt;a href=&quot;#我希望告诉你关于Angular-js&quot; class=&quot;headerlink&quot; title=&quot;我希望告诉你关于Angular.js&quot;&gt;&lt;/a&gt;我希望告诉你关于Angular.js&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;翻译自&lt;a href=&quot;http://ruoyusun.com/2013/05/25/things-i-wish-i-were-told-about-angular-js.html&quot;&gt;Things I Wish I Were Told About Angular.js&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最近，我在一个项目中使用了Angular.js。在我写这篇文章的时候，他已经算得上是一个中等规模的应用（~10 modules, ~20 controllers, ~5 services and ~10 directives）以及相当完整的测试覆盖率。回首往事，我发现自己学到了Angular.js的很多知识。这并不是一个顺利的过程：我经历了许多的重构和重写。许多事情我希望当我使用Angular.js工作之前就可以知道。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 小心！这篇博客是基于Angular.js稳定分支（1.0.x的）。如果你选择一些其他的Angular.js的版本，一些内容可能并不适用&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -386,7 +391,7 @@
 &lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;email &amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[GitHub](http://github.com)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;自动生成连接  &amp;lt;http://www.github.com/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;Control + Shift + L&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;如果是 MWeb 的文档库中的文档，拖放或&lt;code&gt;CMD + Option + I&lt;/code&gt; 导入非图片时，会生成连接。&lt;br&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#101;&amp;#x78;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#x40;&amp;#101;&amp;#x78;&amp;#97;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#x65;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#101;&amp;#x78;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#x40;&amp;#101;&amp;#x78;&amp;#97;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#x65;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
+&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#58;&amp;#x65;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#x40;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#108;&amp;#101;&amp;#x2e;&amp;#99;&amp;#111;&amp;#109;&quot;&gt;&amp;#x65;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#x40;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#108;&amp;#101;&amp;#x2e;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
 &lt;h2 id=&quot;区块引用&quot;&gt;&lt;a href=&quot;#区块引用&quot; class=&quot;headerlink&quot; title=&quot;区块引用&quot;&gt;&lt;/a&gt;区块引用&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;某某说:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; 第一行引用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; 第二行费用文字&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;CMD + Shift + B&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;效果如下：&lt;/p&gt;
