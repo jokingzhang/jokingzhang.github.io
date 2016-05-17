@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jokingzhang.github.io/"/>
-  <updated>2016-05-16T17:24:45.000Z</updated>
+  <updated>2016-05-17T01:35:34.000Z</updated>
   <id>http://jokingzhang.github.io/</id>
   
   <author>
@@ -16,13 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>为Angular献上美好祝福-番外篇1.3-我希望告诉你一些关于Angular的事情</title>
-    <link href="http://jokingzhang.github.io/2016/05/16/%E4%B8%BAAngular%E7%8C%AE%E4%B8%8A%E7%BE%8E%E5%A5%BD%E7%A5%9D%E7%A6%8F-%E7%95%AA%E5%A4%96%E7%AF%871-3-%E6%88%91%E5%B8%8C%E6%9C%9B%E5%91%8A%E8%AF%89%E4%BD%A0%E4%B8%80%E4%BA%9B%E5%85%B3%E4%BA%8EAngular%E7%9A%84%E4%BA%8B%E6%83%85/"/>
-    <id>http://jokingzhang.github.io/2016/05/16/为Angular献上美好祝福-番外篇1-3-我希望告诉你一些关于Angular的事情/</id>
+    <title>为Angular献上美好祝福-番外篇1.3-希望有人告诉我关于Angular.js</title>
+    <link href="http://jokingzhang.github.io/2016/05/16/%E4%B8%BAAngular%E7%8C%AE%E4%B8%8A%E7%BE%8E%E5%A5%BD%E7%A5%9D%E7%A6%8F-%E7%95%AA%E5%A4%96%E7%AF%871-3-%E5%B8%8C%E6%9C%9B%E6%9C%89%E4%BA%BA%E5%91%8A%E8%AF%89%E6%88%91%E5%85%B3%E4%BA%8EAngular.js/"/>
+    <id>http://jokingzhang.github.io/2016/05/16/为Angular献上美好祝福-番外篇1-3-希望有人告诉我关于Angular.js/</id>
     <published>2016-05-16T14:28:58.000Z</published>
-    <updated>2016-05-16T17:24:45.000Z</updated>
+    <updated>2016-05-17T01:35:34.000Z</updated>
     
-    <content type="html">&lt;h3 id=&quot;我希望告诉你关于Angular-js&quot;&gt;&lt;a href=&quot;#我希望告诉你关于Angular-js&quot; class=&quot;headerlink&quot; title=&quot;我希望告诉你关于Angular.js&quot;&gt;&lt;/a&gt;我希望告诉你关于Angular.js&lt;/h3&gt;&lt;blockquote&gt;
+    <content type="html">&lt;h3 id=&quot;希望有人告诉我关于Angular-js&quot;&gt;&lt;a href=&quot;#希望有人告诉我关于Angular-js&quot; class=&quot;headerlink&quot; title=&quot;希望有人告诉我关于Angular.js&quot;&gt;&lt;/a&gt;希望有人告诉我关于Angular.js&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;翻译自&lt;a href=&quot;http://ruoyusun.com/2013/05/25/things-i-wish-i-were-told-about-angular-js.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Things I Wish I Were Told About Angular.js&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;最近，我在一个项目中使用了Angular.js。在我写这篇文章的时候，他已经算得上是一个中等规模的应用（~10 modules, ~20 controllers, ~5 services and ~10 directives）以及相当完整的测试覆盖率。回首往事，我发现自己学到了Angular.js的很多知识。这并不是一个顺利的过程：我经历了许多的重构和重写。许多事情我希望当我使用Angular.js工作之前就可以知道。&lt;/p&gt;
@@ -56,7 +56,7 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;我希望告诉你关于Angular-js&quot;&gt;&lt;a href=&quot;#我希望告诉你关于Angular-js&quot; class=&quot;headerlink&quot; title=&quot;我希望告诉你关于Angular.js&quot;&gt;&lt;/a&gt;我希望告诉你关于Angular.js&lt;/h3&gt;&lt;blockquote&gt;
+      &lt;h3 id=&quot;希望有人告诉我关于Angular-js&quot;&gt;&lt;a href=&quot;#希望有人告诉我关于Angular-js&quot; class=&quot;headerlink&quot; title=&quot;希望有人告诉我关于Angular.js&quot;&gt;&lt;/a&gt;希望有人告诉我关于Angular.js&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;翻译自&lt;a href=&quot;http://ruoyusun.com/2013/05/25/things-i-wish-i-were-told-about-angular-js.html&quot;&gt;Things I Wish I Were Told About Angular.js&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;最近，我在一个项目中使用了Angular.js。在我写这篇文章的时候，他已经算得上是一个中等规模的应用（~10 modules, ~20 controllers, ~5 services and ~10 directives）以及相当完整的测试覆盖率。回首往事，我发现自己学到了Angular.js的很多知识。这并不是一个顺利的过程：我经历了许多的重构和重写。许多事情我希望当我使用Angular.js工作之前就可以知道。&lt;/p&gt;
@@ -391,7 +391,7 @@
 &lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;email &amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[GitHub](http://github.com)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;自动生成连接  &amp;lt;http://www.github.com/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;Control + Shift + L&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;如果是 MWeb 的文档库中的文档，拖放或&lt;code&gt;CMD + Option + I&lt;/code&gt; 导入非图片时，会生成连接。&lt;br&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#58;&amp;#x65;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#x40;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#108;&amp;#101;&amp;#x2e;&amp;#99;&amp;#111;&amp;#109;&quot;&gt;&amp;#x65;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#x40;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#108;&amp;#101;&amp;#x2e;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
+&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#x65;&amp;#x78;&amp;#97;&amp;#x6d;&amp;#112;&amp;#108;&amp;#101;&amp;#x40;&amp;#101;&amp;#x78;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#x65;&amp;#x78;&amp;#97;&amp;#x6d;&amp;#112;&amp;#108;&amp;#101;&amp;#x40;&amp;#101;&amp;#x78;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
 &lt;h2 id=&quot;区块引用&quot;&gt;&lt;a href=&quot;#区块引用&quot; class=&quot;headerlink&quot; title=&quot;区块引用&quot;&gt;&lt;/a&gt;区块引用&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;某某说:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; 第一行引用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; 第二行费用文字&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;CMD + Shift + B&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;效果如下：&lt;/p&gt;
