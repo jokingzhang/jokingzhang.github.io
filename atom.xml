@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jokingzhang.github.io/"/>
-  <updated>2016-05-17T01:35:34.000Z</updated>
+  <updated>2016-05-18T08:01:21.000Z</updated>
   <id>http://jokingzhang.github.io/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Protractor来测试Angular.js</title>
+    <link href="http://jokingzhang.github.io/2016/05/18/%E4%BD%BF%E7%94%A8Protractor%E6%9D%A5%E6%B5%8B%E8%AF%95Angular-js/"/>
+    <id>http://jokingzhang.github.io/2016/05/18/使用Protractor来测试Angular-js/</id>
+    <published>2016-05-18T07:59:45.000Z</published>
+    <updated>2016-05-18T08:01:21.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;端对端-e2e-测试&quot;&gt;&lt;a href=&quot;#端对端-e2e-测试&quot; class=&quot;headerlink&quot; title=&quot;端对端(e2e)测试&quot;&gt;&lt;/a&gt;端对端(e2e)测试&lt;/h3&gt;&lt;p&gt;随着应用的复杂性和规模的增长，单纯的依赖手工测试来验证新的功能、捕捉错误、以及回归测试就变得不切实际。单元测试是捕获BUG的第一道防线。但是，有时组件之间的相互通信就很难靠单元测试来捕获异常。&lt;strong&gt;端对端(e2e)测试&lt;/strong&gt;就是用来解决这样的问题的。&lt;br&gt;我们建立了&lt;a href=&quot;https://github.com/angular/protractor&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Protractor&lt;/a&gt;，一个端对端测试来模拟用户的交互，这将有助于验证你的Angular应用的运行状况。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;使用Protractor&quot;&gt;&lt;a href=&quot;#使用Protractor&quot; class=&quot;headerlink&quot; title=&quot;使用Protractor&quot;&gt;&lt;/a&gt;使用Protractor&lt;/h3&gt;&lt;p&gt;Protractor是一个Node.js程序，所以运行端对端(e2e)测试需要编写JavaScript代码，并且使用Node。Protractor使用&lt;a href=&quot;http://www.webdriver.org/article-4-1.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WebDriver&lt;/a&gt;（一种用于Web应用程序的自动测试工具）来控制浏览器，并模仿用户的行为。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.protractortest.org/#/getting-started&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Protractor get started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.protractortest.org/#/api&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Protractor API&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Protractor使用&lt;a href=&quot;http://jasmine.github.io/1.3/introduction.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Jasmine&lt;/a&gt;作为他的测试语法。作为一个单元测试，一个测试文件一般会由一个或多个it块来描述你应用的需求。it模块是由&lt;strong&gt;命令&lt;/strong&gt;和&lt;strong&gt;期望&lt;/strong&gt;来组成的。命令告诉Protractor对应用来做一些事情，比如跳转页面，或者点击一个按钮。期望则是让Protractor断言一些应用程序的状态，比如某个字段的值是否正确，或者当前的URL是否正确。&lt;/p&gt;
+&lt;p&gt;当一个it块失败的时候，程序会把它标记为&lt;strong&gt;filed&lt;/strong&gt;，并继续下一个模块的测试。&lt;/p&gt;
+&lt;p&gt;测试文件可能会有beforeEach和afterEach模块，分别运行在每个it模块之前，以及之后。而且不论当前it模块成功或者失败都会执行。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o6unimsmt.bkt.clouddn.com/me/scenario_runner.png&quot; alt=&quot;模仿一个程序的结构&quot;&gt;&lt;/p&gt;
+&lt;p&gt;除了上述的内容，测试也可以包含一些辅助函数，以避免重复的代码。&lt;/p&gt;
+&lt;p&gt;下面是一个简单的例子&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;describe(&lt;span class=&quot;string&quot;&gt;&#39;TODO list&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  it(&lt;span class=&quot;string&quot;&gt;&#39;should filter results&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Find the element with ng-model=&quot;user&quot; and type &quot;jacksparrow&quot; into it&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    element(by.model(&lt;span class=&quot;string&quot;&gt;&#39;user&#39;&lt;/span&gt;)).sendKeys(&lt;span class=&quot;string&quot;&gt;&#39;jacksparrow&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Find the first (and only) button on the page and click it&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    element(by.css(&lt;span class=&quot;string&quot;&gt;&#39;:button&#39;&lt;/span&gt;)).click();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Verify that there are 10 tasks&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    expect(element.all(by.repeater(&lt;span class=&quot;string&quot;&gt;&#39;task in tasks&#39;&lt;/span&gt;)).count()).toEqual(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Enter &#39;groceries&#39; into the element with ng-model=&quot;filterText&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    element(by.model(&lt;span class=&quot;string&quot;&gt;&#39;filterText&#39;&lt;/span&gt;)).sendKeys(&lt;span class=&quot;string&quot;&gt;&#39;groceries&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Verify that now there is only one item in the task list&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    expect(element.all(by.repeater(&lt;span class=&quot;string&quot;&gt;&#39;task in tasks&#39;&lt;/span&gt;)).count()).toEqual(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此测试描述了TODO List的要求，具体地，它应该是能够过滤的项目的列表。&lt;/p&gt;
+&lt;h3 id=&quot;例子&quot;&gt;&lt;a href=&quot;#例子&quot; class=&quot;headerlink&quot; title=&quot;例子&quot;&gt;&lt;/a&gt;例子&lt;/h3&gt;&lt;p&gt;看看&lt;a href=&quot;https://github.com/angular/angular-seed&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;angular-seed&lt;/a&gt;中的更多例子，或者看看Angular.js文档中的嵌入的代码。（例如，$http在protractor.js标签底下会有一个&lt;a href=&quot;https://docs.angularjs.org/api/ng/service/$http&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;例子&lt;/a&gt;）&lt;/p&gt;
+&lt;h3 id=&quot;警告&quot;&gt;&lt;a href=&quot;#警告&quot; class=&quot;headerlink&quot; title=&quot;警告&quot;&gt;&lt;/a&gt;警告&lt;/h3&gt;&lt;p&gt;当使用&lt;code&gt;angular.bootstrap&lt;/code&gt;初始化程序的时候，Protractor是不会工作的，需要使用&lt;code&gt;ng-app&lt;/code&gt;指令来初始化程序。&lt;/p&gt;
+&lt;p&gt;原文：&lt;a href=&quot;https://docs.angularjs.org/guide/e2e-testing&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://docs.angularjs.org/guide/e2e-testing&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;端对端-e2e-测试&quot;&gt;&lt;a href=&quot;#端对端-e2e-测试&quot; class=&quot;headerlink&quot; title=&quot;端对端(e2e)测试&quot;&gt;&lt;/a&gt;端对端(e2e)测试&lt;/h3&gt;&lt;p&gt;随着应用的复杂性和规模的增长，单纯的依赖手工测试来验证新的功能、捕捉错误、以及回归测试就变得不切实际。单元测试是捕获BUG的第一道防线。但是，有时组件之间的相互通信就很难靠单元测试来捕获异常。&lt;strong&gt;端对端(e2e)测试&lt;/strong&gt;就是用来解决这样的问题的。&lt;br&gt;我们建立了&lt;a href=&quot;https://github.com/angular/protractor&quot;&gt;Protractor&lt;/a&gt;，一个端对端测试来模拟用户的交互，这将有助于验证你的Angular应用的运行状况。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://jokingzhang.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="Angular.js" scheme="http://jokingzhang.github.io/tags/Angular-js/"/>
+    
+      <category term="测试" scheme="http://jokingzhang.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="Protractor" scheme="http://jokingzhang.github.io/tags/Protractor/"/>
+    
+  </entry>
   
   <entry>
     <title>为Angular献上美好祝福-番外篇1.3-希望有人告诉我关于Angular.js</title>
@@ -449,7 +493,7 @@
 &lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;email &amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[GitHub](http://github.com)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;自动生成连接  &amp;lt;http://www.github.com/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;Control + Shift + L&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;如果是 MWeb 的文档库中的文档，拖放或&lt;code&gt;CMD + Option + I&lt;/code&gt; 导入非图片时，会生成连接。&lt;br&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#x65;&amp;#120;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#108;&amp;#101;&amp;#x40;&amp;#x65;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#108;&amp;#101;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#x65;&amp;#120;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#108;&amp;#101;&amp;#x40;&amp;#x65;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#108;&amp;#101;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
+&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#x74;&amp;#111;&amp;#58;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#x65;&amp;#x40;&amp;#101;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#x65;&amp;#x40;&amp;#101;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
 &lt;h2 id=&quot;区块引用&quot;&gt;&lt;a href=&quot;#区块引用&quot; class=&quot;headerlink&quot; title=&quot;区块引用&quot;&gt;&lt;/a&gt;区块引用&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;某某说:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; 第一行引用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; 第二行费用文字&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;CMD + Shift + B&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;效果如下：&lt;/p&gt;
