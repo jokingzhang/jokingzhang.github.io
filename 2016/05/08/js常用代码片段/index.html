@@ -96,7 +96,7 @@ Date format123456789101112131415Date.prototype.Format = function (fmt) &amp;#123
 
 1234var a = &amp;#123;// your property&amp;#125;;var copy = JSON.parse(JSON.stringify(a));
 Date format123456789101112131415Date.prototype.Format = function (fmt) &amp;#123; //author: meizz">
-<meta property="og:updated_time" content="2016-05-09T09:43:39.000Z">
+<meta property="og:updated_time" content="2016-09-01T09:17:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js常用代码片段">
 <meta name="twitter:description" content="deep copy
@@ -401,6 +401,8 @@ Date format123456789101112131415Date.prototype.Format = function (fmt) &amp;#123
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArrayLike</span>(<span class="params">o</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (o &amp;&amp;</span><br><span class="line">    <span class="keyword">typeof</span> o === <span class="string">'object'</span> &amp;&amp;</span><br><span class="line">    <span class="built_in">isFinite</span>(o.length) &amp;&amp;</span><br><span class="line">    o.length &gt;= <span class="number">0</span> &amp;&amp;</span><br><span class="line">    o.length === <span class="built_in">Math</span>.floor(o.length) &amp;&amp;</span><br><span class="line">    o.length &lt; <span class="number">4294967296</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="生成指定范围的随机整数"><a href="#生成指定范围的随机整数" class="headerlink" title="生成指定范围的随机整数"></a>生成指定范围的随机整数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">rd</span>(<span class="params">n,m</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> c = m-n+<span class="number">1</span>; </span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * c + n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="使用-3"><a href="#使用-3" class="headerlink" title="使用"></a>使用</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rd(<span class="number">1</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<p>###迷之好用的同步操作异步大法（限自己观看）<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> b = [];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;a.length;i++)&#123;</span><br><span class="line">  b[i] = (<span class="function"><span class="keyword">function</span>(<span class="params">index, ele</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(ele == <span class="number">2</span>)&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;(i, a[i]))</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;b.length;j++)&#123;</span><br><span class="line">  <span class="keyword">var</span> _flag = b[j]();</span><br><span class="line">  <span class="built_in">console</span>.log(j,<span class="string">'--&gt;'</span>,b[j]());</span><br><span class="line">  <span class="keyword">if</span>(_flag)&#123;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -554,7 +556,7 @@ Date format123456789101112131415Date.prototype.Format = function (fmt) &amp;#123
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -571,7 +573,7 @@ Date format123456789101112131415Date.prototype.Format = function (fmt) &amp;#123
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -669,7 +671,7 @@ Date format123456789101112131415Date.prototype.Format = function (fmt) &amp;#123
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
